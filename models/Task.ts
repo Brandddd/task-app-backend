@@ -4,12 +4,13 @@ const taskSchema = new Schema(
   {
     title: {
       type: String,
-      required: true,
+      required: [true, 'Path title is required!'],
       trim: true,
+      unique: true,
     },
     description: {
       type: String,
-      required: true,
+      required: [true, 'Path description is required!'],
       trim: true,
     },
     done: {
